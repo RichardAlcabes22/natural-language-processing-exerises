@@ -24,6 +24,9 @@ REPOS = [
     "gocodeup/codeup-setup-script",
     "gocodeup/movies-application",
     "torvalds/linux",
+    "RichardAlcabes22/nba_project",
+    "modin-project/modin",
+    "Cod-Up-Our-Data/wine_clustering_project"
 ]
 
 headers = {"Authorization": f"token {github_token}", "User-Agent": github_username}
