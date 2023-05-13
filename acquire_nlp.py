@@ -1,9 +1,10 @@
 """
+
 A module for obtaining repo readme and language data from the github API.
 Before using this module, read through it, and follow the instructions marked
 TODO.
 After doing so, run it like this:
-    python acquire.py
+    python acquire_nlp.py
 To create the `data.json` file that contains the data.
 """
 import os
@@ -20,14 +21,19 @@ from env import github_token, github_username
 # TODO: Add your github username to your env.py file under the variable `github_username`
 # TODO: Add more repositories to the `REPOS` list below.
 
-REPOS = [
-    "gocodeup/codeup-setup-script",
-    "gocodeup/movies-application",
-    "torvalds/linux",
-    "RichardAlcabes22/nba_project",
-    "modin-project/modin",
-    "Cod-Up-Our-Data/wine_clustering_project"
-]
+#r1
+repo_names = ['ujjwalkarn/DataScienceR',
+ 'IndrajeetPatil/ggstatsplot',
+ 'easystats/easystats',
+ 'seandavi/sars2pack',
+ 'markvanderloo/lumberjack',
+ 'benubah/r-community-explorer',
+ 'cattystats/Anomaly_Detection',
+ 'anishsingh20/Human-Resource-Analytics-and-Employee-Churn-Prediction',
+ 'adityashrm21/Bike-Sharing-Demand-Kaggle',
+ 'arbuzovv/rusquant']
+
+REPOS = repo_names
 
 headers = {"Authorization": f"token {github_token}", "User-Agent": github_username}
 
@@ -112,4 +118,4 @@ def scrape_github_data() -> List[Dict[str, str]]:
 
 if __name__ == "__main__":
     data = scrape_github_data()
-    json.dump(data, open("data.json", "w"), indent=1)
+    json.dump(data, open("data_r1.json", "w"), indent=1)

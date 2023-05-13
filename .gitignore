@@ -9,3 +9,4 @@ catboost_info
 *.xls
 *.xl
 *.txt
+*.json
